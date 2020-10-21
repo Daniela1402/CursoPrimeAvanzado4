@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Registrate</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+        <h:outputStylesheet  name="css/form1.css" />
+    </h:head>
+    <body class="bg-light">
+        <center>
+        <div class="fondo">
+            <div class="form">
+        <div class="container mb-6 shadow-lg rounded">
+            <h:form>
+                <p:fieldset legend="Datos Personales" class="w-100 text-center">
+                    <div class="row">
+                        <div class="col-lg-12 mx-auto">
+                            <div class="row">
+                                <div class="col-lg-6">
+
+                                    <p:outputLabel value="Documento"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.documento}"/>
+
+                                    <p:outputLabel value="PrimerNombre"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.primerNombre}"/>
+
+                                    <p:outputLabel value="SegundoNombre"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.segundoNombre}"/>
+
+                                    <p:outputLabel value="PrimerApellido"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.primerApellido}"/>
+
+                                    <p:outputLabel value="SegundoApellido"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.segundoApellido}"/>
+
+                                    <p:outputLabel value="FechaNacimiento"/>
+                                    <p:calendar class="form-control" value="#{usuarioController.usuario.fechaNacimiento}"/>
+                                    
+                                    <p:outputLabel value="PASSWORD"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.PASSWORD}"/>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <p:outputLabel value="Direccion"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.direccion}"/>
+
+                                    <p:outputLabel value="Telefono"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.telefono}"/>
+
+                                    <p:outputLabel value="CorreoElectronico"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.correoElectronico}"/>
+
+                                    <p:outputLabel value="Ciudad"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.ciudad}"/>
+
+                                    <p:outputLabel value="Genero"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.genero}"/>
+
+                                    <p:outputLabel value="Id_rol"/>
+                                    <p:inputText class="form-control" value="#{usuarioController.usuario.rol}"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 text-center mt-3">
+                            <p:commandButton icon="ui-icon-check" class="btn btn-danger" value="Registrar" actionListener="#{usuarioController.registrar()}"/> 
+                        </div>
+                       <div class="col-lg-6 text-center mt-3" >
+                       <p:linkButton icon="ui-icon-check" class="btn btn-danger" outcome="Principal" value="Volver al Inicio" style="margin-right:20px;">
+                        <f:param name="productId" value="10" />
+                        </p:linkButton>
+                       </div>
+                    </div>
+                </p:fieldset>
+            </h:form>
+        </div>
+       </div>
+    </div>
+            </center>
+
+       <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </body>
+</html>
